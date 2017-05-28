@@ -3,9 +3,6 @@ import pandas as pd
 import seaborn as sns;
 import matplotlib.pyplot as plt
 import matplotlib
-from sklearn import preprocessing
-from sklearn.model_selection import train_test_split
-from sklearn import linear_model
 
 matplotlib.style.use('ggplot')
 sns.set(context="paper", font="monospace")
@@ -84,7 +81,7 @@ f3m.savefig('part3m.png',bbox_inches='tight', dpi = 450)
 
 f3s, ax3s = plt.subplots(figsize = (18.5, 10.5))
 sns.heatmap(soyACorr, vmin = -1, vmax = 1, square = True)
-ax3s.set_title('Soybean', fontsize= 30)
+#ax3s.set_title('Soybean', fontsize= 30)
 ax3s.tick_params(labelsize = 16)
 plt.yticks(rotation = 0)
 plt.xticks(rotation = 90)
@@ -154,7 +151,7 @@ ax5m[1,1].set_title(str(maizeYCorr['Tsr_06']), fontsize = 20)
 ax5m[1,2].set_title(str(maizeYCorr['Tsr_09']), fontsize = 20)
 ax5m[1,3].set_title(str(maizeYCorr['Tmin_07']), fontsize = 20)
 
-fig5m.suptitle('Maize', fontsize = 40)
+fig5m.suptitle('Maize', fontsize = 50)
 
 sns.regplot(x=maize['Pmm_06'], y = maize['Yield'],ax = ax5m[0,0], truncate = True)
 sns.regplot(x = maize['ETR_06'],y = maize['Yield'],ax = ax5m[0,1], truncate=True)
